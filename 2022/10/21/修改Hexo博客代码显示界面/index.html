@@ -1,0 +1,1220 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="修改Hexo博客代码显示界面, 博客制作,经验分享,大道修心,生物信息等">
+    <meta name="description" content="TO LEARN | TO LOVE | TO LIVE">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>修改Hexo博客代码显示界面 | way·to·happy</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<style>
+#waifu{
+    left: auto !important;
+    right: 140px !important;
+}
+</style>
+
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">way·to·happy</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">way·to·happy</div>
+        <div class="logo-desc">
+            
+            TO LEARN | TO LOVE | TO LIVE
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/wayto-happy" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/wayto-happy" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">修改Hexo博客代码显示界面</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                课外学习
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-10-21
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>To learn！</p>
+<p>To live！ </p>
+<p>To love！</p>
+<hr>
+<h1 id="修改Hexo博客代码显示界面"><a href="#修改Hexo博客代码显示界面" class="headerlink" title="修改Hexo博客代码显示界面"></a>修改Hexo博客代码显示界面</h1><h2 id="一、配置js文件"><a href="#一、配置js文件" class="headerlink" title="一、配置js文件"></a>一、配置js文件</h2><p>进入要修改主题文件夹themes/**/source/libs 路径之后，创建一个codeBlock文件夹</p>
+<p>然后在该文件下创建五个后缀 .js 文件，并分别写入下方代码</p>
+<h3 id="1、codeBlockFuction-js-文件"><a href="#1、codeBlockFuction-js-文件" class="headerlink" title="1、codeBlockFuction.js 文件"></a>1、codeBlockFuction.js 文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">&#x27;pre&#x27;</span>).wrap(<span class="string">&#x27;&lt;div class=&quot;code-area&quot; style=&quot;position: relative&quot;&gt;&lt;/div&gt;&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、codeBLang-js-文件"><a href="#2、codeBLang-js-文件" class="headerlink" title="2、codeBLang.js 文件"></a>2、codeBLang.js 文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> $highlight_lang = $(<span class="string">&#x27;&lt;div class=&quot;code_lang&quot; title=&quot;代码语言&quot;&gt;&lt;/div&gt;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  $(<span class="string">&#x27;pre&#x27;</span>).after($highlight_lang);</span><br><span class="line">  $(<span class="string">&#x27;pre&#x27;</span>).each(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> code_language = $(<span class="built_in">this</span>).attr(<span class="string">&#x27;class&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (!code_language) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> lang_name = code_language.replace(<span class="string">&quot;line-numbers&quot;</span>, <span class="string">&quot;&quot;</span>).trim().replace(<span class="string">&quot;language-&quot;</span>, <span class="string">&quot;&quot;</span>).trim();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 首字母大写</span></span><br><span class="line">lang_name = lang_name.slice(<span class="number">0</span>, <span class="number">1</span>).toUpperCase() + lang_name.slice(<span class="number">1</span>);</span><br><span class="line">$(<span class="built_in">this</span>).siblings(<span class="string">&quot;.code_lang&quot;</span>).text(lang_name);</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、codeCopy-js-文件"><a href="#3、codeCopy-js-文件" class="headerlink" title="3、codeCopy.js 文件"></a>3、codeCopy.js 文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> $copyIcon = $(<span class="string">&#x27;&lt;i class=&quot;fa fa-copy code_copy&quot; title=&quot;复制代码&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#x27;</span>);</span><br><span class="line">    $(<span class="string">&#x27;.code-area&#x27;</span>).prepend($copyIcon);</span><br><span class="line"><span class="keyword">new</span> ClipboardJS(<span class="string">&#x27;.fa-copy&#x27;</span>, &#123;</span><br><span class="line">    <span class="attr">target</span>: <span class="function"><span class="keyword">function</span> (<span class="params">trigger</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> trigger.nextElementSibling;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4、clipboard-min-js-文件"><a href="#4、clipboard-min-js-文件" class="headerlink" title="4、clipboard.min.js 文件"></a>4、clipboard.min.js 文件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br><span class="line">351</span><br><span class="line">352</span><br><span class="line">353</span><br><span class="line">354</span><br><span class="line">355</span><br><span class="line">356</span><br><span class="line">357</span><br><span class="line">358</span><br><span class="line">359</span><br><span class="line">360</span><br><span class="line">361</span><br><span class="line">362</span><br><span class="line">363</span><br><span class="line">364</span><br><span class="line">365</span><br><span class="line">366</span><br><span class="line">367</span><br><span class="line">368</span><br><span class="line">369</span><br><span class="line">370</span><br><span class="line">371</span><br><span class="line">372</span><br><span class="line">373</span><br><span class="line">374</span><br><span class="line">375</span><br><span class="line">376</span><br><span class="line">377</span><br><span class="line">378</span><br><span class="line">379</span><br><span class="line">380</span><br><span class="line">381</span><br><span class="line">382</span><br><span class="line">383</span><br><span class="line">384</span><br><span class="line">385</span><br><span class="line">386</span><br><span class="line">387</span><br><span class="line">388</span><br><span class="line">389</span><br><span class="line">390</span><br><span class="line">391</span><br><span class="line">392</span><br><span class="line">393</span><br><span class="line">394</span><br><span class="line">395</span><br><span class="line">396</span><br><span class="line">397</span><br><span class="line">398</span><br><span class="line">399</span><br><span class="line">400</span><br><span class="line">401</span><br><span class="line">402</span><br><span class="line">403</span><br><span class="line">404</span><br><span class="line">405</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*!</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">* clipboard.js v2.0.4</span></span><br><span class="line"><span class="comment">* https://zenorocha.github.io/clipboard.js</span></span><br><span class="line"><span class="comment">* </span></span><br><span class="line"><span class="comment">* Licensed MIT © Zeno Rocha</span></span><br><span class="line"><span class="comment">*/</span> </span><br><span class="line">! <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line"><span class="string">&quot;object&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">exports</span> &amp;&amp; <span class="string">&quot;object&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">module</span> ? <span class="built_in">module</span>.exports = e() : <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> define &amp;&amp; define.amd ? define([], e) : <span class="string">&quot;object&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">exports</span> ? <span class="built_in">exports</span>.ClipboardJS = e() : t.ClipboardJS = e()</span><br><span class="line">&#125;(<span class="built_in">this</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (o[t]) <span class="keyword">return</span> o[t].exports;</span><br><span class="line">    <span class="keyword">var</span> e = o[t] = &#123;</span><br><span class="line">        <span class="attr">i</span>: t,</span><br><span class="line">        <span class="attr">l</span>: !<span class="number">1</span>,</span><br><span class="line">        <span class="attr">exports</span>: &#123;&#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> n[t].call(e.exports, e, e.exports, r), e.l = !<span class="number">0</span>, e.exports</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> r.m = n, r.c = o, r.d = <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">    r.o(t, e) || <span class="built_in">Object</span>.defineProperty(t, e, &#123;</span><br><span class="line">        <span class="attr">enumerable</span>: !<span class="number">0</span>,</span><br><span class="line">        <span class="attr">get</span>: n</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, r.r = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> <span class="built_in">Symbol</span> &amp;&amp; <span class="built_in">Symbol</span>.toStringTag &amp;&amp; <span class="built_in">Object</span>.defineProperty(t, <span class="built_in">Symbol</span>.toStringTag, &#123;</span><br><span class="line">        <span class="attr">value</span>: <span class="string">&quot;Module&quot;</span></span><br><span class="line">    &#125;), <span class="built_in">Object</span>.defineProperty(t, <span class="string">&quot;__esModule&quot;</span>, &#123;</span><br><span class="line">        <span class="attr">value</span>: !<span class="number">0</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, r.t = <span class="function"><span class="keyword">function</span> (<span class="params">e, t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> &amp; t &amp;&amp; (e = r(e)), <span class="number">8</span> &amp; t) <span class="keyword">return</span> e;</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">4</span> &amp; t &amp;&amp; <span class="string">&quot;object&quot;</span> == <span class="keyword">typeof</span> e &amp;&amp; e &amp;&amp; e.__esModule) <span class="keyword">return</span> e;</span><br><span class="line">    <span class="keyword">var</span> n = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span><br><span class="line">    <span class="keyword">if</span> (r.r(n), <span class="built_in">Object</span>.defineProperty(n, <span class="string">&quot;default&quot;</span>, &#123;</span><br><span class="line">            <span class="attr">enumerable</span>: !<span class="number">0</span>,</span><br><span class="line">            <span class="attr">value</span>: e</span><br><span class="line">        &#125;), <span class="number">2</span> &amp; t &amp;&amp; <span class="string">&quot;string&quot;</span> != <span class="keyword">typeof</span> e)</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> o <span class="keyword">in</span> e) r.d(n, o, <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> e[t]</span><br><span class="line">        &#125;.bind(<span class="literal">null</span>, o));</span><br><span class="line">    <span class="keyword">return</span> n</span><br><span class="line">&#125;, r.n = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> e = t &amp;&amp; t.__esModule ? <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t.default</span><br><span class="line">    &#125; : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> t</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> r.d(e, <span class="string">&quot;a&quot;</span>, e), e</span><br><span class="line">&#125;, r.o = <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.hasOwnProperty.call(t, e)</span><br><span class="line">&#125;, r.p = <span class="string">&quot;&quot;</span>, r(r.s = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">&#125;([<span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line"><span class="meta">    &quot;use strict&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> r = <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span> &amp;&amp; <span class="string">&quot;symbol&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span>.iterator ? <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">typeof</span> t</span><br><span class="line">        &#125; : <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> t &amp;&amp; <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span> &amp;&amp; t.constructor === <span class="built_in">Symbol</span> &amp;&amp; t !== <span class="built_in">Symbol</span>.prototype ? <span class="string">&quot;symbol&quot;</span> : <span class="keyword">typeof</span> t</span><br><span class="line">        &#125;,</span><br><span class="line">        i = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>; n &lt; e.length; n++) &#123;</span><br><span class="line">                    <span class="keyword">var</span> o = e[n];</span><br><span class="line">                    o.enumerable = o.enumerable || !<span class="number">1</span>, o.configurable = !<span class="number">0</span>, <span class="string">&quot;value&quot;</span> <span class="keyword">in</span> o &amp;&amp; (o.writable = !<span class="number">0</span>), <span class="built_in">Object</span>.defineProperty(t, o.key, o)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> e &amp;&amp; o(t.prototype, e), n &amp;&amp; o(t, n), t</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(),</span><br><span class="line">        a = o(n(<span class="number">1</span>)),</span><br><span class="line">        c = o(n(<span class="number">3</span>)),</span><br><span class="line">        u = o(n(<span class="number">4</span>));</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> t &amp;&amp; t.__esModule ? t : &#123;</span><br><span class="line">        <span class="attr">default</span>: t</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> l = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">        ! <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!(t <span class="keyword">instanceof</span> e)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Cannot call a class as a function&quot;</span>)</span><br><span class="line">        &#125;(<span class="built_in">this</span>, o);</span><br><span class="line">        <span class="keyword">var</span> n = <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (!t) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">ReferenceError</span>(<span class="string">&quot;this hasn&#x27;t been initialised - super() hasn&#x27;t been called&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> !e || <span class="string">&quot;object&quot;</span> != <span class="keyword">typeof</span> e &amp;&amp; <span class="string">&quot;function&quot;</span> != <span class="keyword">typeof</span> e ? t : e</span><br><span class="line">        &#125;(<span class="built_in">this</span>, (o.__proto__ || <span class="built_in">Object</span>.getPrototypeOf(o)).call(<span class="built_in">this</span>));</span><br><span class="line">        <span class="keyword">return</span> n.resolveOptions(e), n.listenClick(t), n</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;function&quot;</span> != <span class="keyword">typeof</span> e &amp;&amp; <span class="literal">null</span> !== e) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Super expression must either be null or a function, not &quot;</span> + <span class="keyword">typeof</span> e);</span><br><span class="line">        t.prototype = <span class="built_in">Object</span>.create(e &amp;&amp; e.prototype, &#123;</span><br><span class="line">            <span class="attr">constructor</span>: &#123;</span><br><span class="line">                <span class="attr">value</span>: t,</span><br><span class="line">                <span class="attr">enumerable</span>: !<span class="number">1</span>,</span><br><span class="line">                <span class="attr">writable</span>: !<span class="number">0</span>,</span><br><span class="line">                <span class="attr">configurable</span>: !<span class="number">0</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;), e &amp;&amp; (<span class="built_in">Object</span>.setPrototypeOf ? <span class="built_in">Object</span>.setPrototypeOf(t, e) : t.__proto__ = e)</span><br><span class="line">    &#125;(o, c.default), i(o, [&#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;resolveOptions&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> t = <span class="number">0</span> &lt; <span class="built_in">arguments</span>.length &amp;&amp; <span class="keyword">void</span> <span class="number">0</span> !== <span class="built_in">arguments</span>[<span class="number">0</span>] ? <span class="built_in">arguments</span>[<span class="number">0</span>] : &#123;&#125;;</span><br><span class="line">            <span class="built_in">this</span>.action = <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> t.action ? t.action : <span class="built_in">this</span>.defaultAction, <span class="built_in">this</span>.target = <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> t.target ? t.target : <span class="built_in">this</span>.defaultTarget, <span class="built_in">this</span>.text = <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> t.text ? t.text : <span class="built_in">this</span>.defaultText, <span class="built_in">this</span>.container = <span class="string">&quot;object&quot;</span> === r(t.container) ? t.container : <span class="built_in">document</span>.body</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;listenClick&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> e = <span class="built_in">this</span>;</span><br><span class="line">            <span class="built_in">this</span>.listener = (<span class="number">0</span>, u.default)(t, <span class="string">&quot;click&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> e.onClick(t)</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;onClick&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> e = t.delegateTarget || t.currentTarget;</span><br><span class="line">            <span class="built_in">this</span>.clipboardAction &amp;&amp; (<span class="built_in">this</span>.clipboardAction = <span class="literal">null</span>), <span class="built_in">this</span>.clipboardAction = <span class="keyword">new</span> a.default(&#123;</span><br><span class="line">                <span class="attr">action</span>: <span class="built_in">this</span>.action(e),</span><br><span class="line">                <span class="attr">target</span>: <span class="built_in">this</span>.target(e),</span><br><span class="line">                <span class="attr">text</span>: <span class="built_in">this</span>.text(e),</span><br><span class="line">                <span class="attr">container</span>: <span class="built_in">this</span>.container,</span><br><span class="line">                <span class="attr">trigger</span>: e,</span><br><span class="line">                <span class="attr">emitter</span>: <span class="built_in">this</span></span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;defaultAction&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> s(<span class="string">&quot;action&quot;</span>, t)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;defaultTarget&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> e = s(<span class="string">&quot;target&quot;</span>, t);</span><br><span class="line">            <span class="keyword">if</span> (e) <span class="keyword">return</span> <span class="built_in">document</span>.querySelector(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;defaultText&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> s(<span class="string">&quot;text&quot;</span>, t)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, &#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;destroy&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="built_in">this</span>.listener.destroy(), <span class="built_in">this</span>.clipboardAction &amp;&amp; (<span class="built_in">this</span>.clipboardAction.destroy(), <span class="built_in">this</span>.clipboardAction = <span class="literal">null</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;], [&#123;</span><br><span class="line">        <span class="attr">key</span>: <span class="string">&quot;isSupported&quot;</span>,</span><br><span class="line">        <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> t = <span class="number">0</span> &lt; <span class="built_in">arguments</span>.length &amp;&amp; <span class="keyword">void</span> <span class="number">0</span> !== <span class="built_in">arguments</span>[<span class="number">0</span>] ? <span class="built_in">arguments</span>[<span class="number">0</span>] : [<span class="string">&quot;copy&quot;</span>, <span class="string">&quot;cut&quot;</span>],</span><br><span class="line">                e = <span class="string">&quot;string&quot;</span> == <span class="keyword">typeof</span> t ? [t] : t,</span><br><span class="line">                n = !!<span class="built_in">document</span>.queryCommandSupported;</span><br><span class="line">            <span class="keyword">return</span> e.forEach(<span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">                n = n &amp;&amp; !!<span class="built_in">document</span>.queryCommandSupported(t)</span><br><span class="line">            &#125;), n</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;]), o</span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> n = <span class="string">&quot;data-clipboard-&quot;</span> + t;</span><br><span class="line">    <span class="keyword">if</span> (e.hasAttribute(n)) <span class="keyword">return</span> e.getAttribute(n)</span><br><span class="line">&#125;</span><br><span class="line">t.exports = l</span><br><span class="line"></span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line"><span class="meta">    &quot;use strict&quot;</span>;</span><br><span class="line">    <span class="keyword">var</span> o, r = <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span> &amp;&amp; <span class="string">&quot;symbol&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span>.iterator ? <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">typeof</span> t</span><br><span class="line">        &#125; : <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> t &amp;&amp; <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> <span class="built_in">Symbol</span> &amp;&amp; t.constructor === <span class="built_in">Symbol</span> &amp;&amp; t !== <span class="built_in">Symbol</span>.prototype ? <span class="string">&quot;symbol&quot;</span> : <span class="keyword">typeof</span> t</span><br><span class="line">        &#125;,</span><br><span class="line">        i = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>; n &lt; e.length; n++) &#123;</span><br><span class="line">                    <span class="keyword">var</span> o = e[n];</span><br><span class="line">                    o.enumerable = o.enumerable || !<span class="number">1</span>, o.configurable = !<span class="number">0</span>, <span class="string">&quot;value&quot;</span> <span class="keyword">in</span> o &amp;&amp; (o.writable = !<span class="number">0</span>), <span class="built_in">Object</span>.defineProperty(t, o.key, o)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> e &amp;&amp; o(t.prototype, e), n &amp;&amp; o(t, n), t</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;(),</span><br><span class="line">        a = n(<span class="number">2</span>),</span><br><span class="line">        c = (o = a) &amp;&amp; o.__esModule ? o : &#123;</span><br><span class="line">            <span class="attr">default</span>: o</span><br><span class="line">        &#125;;</span><br><span class="line">    <span class="keyword">var</span> u = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">e</span>(<span class="params">t</span>) </span>&#123;</span><br><span class="line">            ! <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (!(t <span class="keyword">instanceof</span> e)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Cannot call a class as a function&quot;</span>)</span><br><span class="line">            &#125;(<span class="built_in">this</span>, e), <span class="built_in">this</span>.resolveOptions(t), <span class="built_in">this</span>.initSelection()</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> i(e, [&#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;resolveOptions&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> t = <span class="number">0</span> &lt; <span class="built_in">arguments</span>.length &amp;&amp; <span class="keyword">void</span> <span class="number">0</span> !== <span class="built_in">arguments</span>[<span class="number">0</span>] ? <span class="built_in">arguments</span>[<span class="number">0</span>] : &#123;&#125;;</span><br><span class="line">                <span class="built_in">this</span>.action = t.action, <span class="built_in">this</span>.container = t.container, <span class="built_in">this</span>.emitter = t.emitter, <span class="built_in">this</span>.target = t.target, <span class="built_in">this</span>.text = t.text, <span class="built_in">this</span>.trigger = t.trigger, <span class="built_in">this</span>.selectedText = <span class="string">&quot;&quot;</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;initSelection&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.text ? <span class="built_in">this</span>.selectFake() : <span class="built_in">this</span>.target &amp;&amp; <span class="built_in">this</span>.selectTarget()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;selectFake&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> t = <span class="built_in">this</span>,</span><br><span class="line">                    e = <span class="string">&quot;rtl&quot;</span> == <span class="built_in">document</span>.documentElement.getAttribute(<span class="string">&quot;dir&quot;</span>);</span><br><span class="line">                <span class="built_in">this</span>.removeFake(), <span class="built_in">this</span>.fakeHandlerCallback = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> t.removeFake()</span><br><span class="line">                &#125;, <span class="built_in">this</span>.fakeHandler = <span class="built_in">this</span>.container.addEventListener(<span class="string">&quot;click&quot;</span>, <span class="built_in">this</span>.fakeHandlerCallback) || !<span class="number">0</span>, <span class="built_in">this</span>.fakeElem = <span class="built_in">document</span>.createElement(<span class="string">&quot;textarea&quot;</span>), <span class="built_in">this</span>.fakeElem.style.fontSize = <span class="string">&quot;12pt&quot;</span>, <span class="built_in">this</span>.fakeElem.style.border = <span class="string">&quot;0&quot;</span>, <span class="built_in">this</span>.fakeElem.style.padding = <span class="string">&quot;0&quot;</span>, <span class="built_in">this</span>.fakeElem.style.margin = <span class="string">&quot;0&quot;</span>, <span class="built_in">this</span>.fakeElem.style.position = <span class="string">&quot;absolute&quot;</span>, <span class="built_in">this</span>.fakeElem.style[e ? <span class="string">&quot;right&quot;</span> : <span class="string">&quot;left&quot;</span>] = <span class="string">&quot;-9999px&quot;</span>;</span><br><span class="line">                <span class="keyword">var</span> n = <span class="built_in">window</span>.pageYOffset || <span class="built_in">document</span>.documentElement.scrollTop;</span><br><span class="line">                <span class="built_in">this</span>.fakeElem.style.top = n + <span class="string">&quot;px&quot;</span>, <span class="built_in">this</span>.fakeElem.setAttribute(<span class="string">&quot;readonly&quot;</span>, <span class="string">&quot;&quot;</span>), <span class="built_in">this</span>.fakeElem.value = <span class="built_in">this</span>.text, <span class="built_in">this</span>.container.appendChild(<span class="built_in">this</span>.fakeElem), <span class="built_in">this</span>.selectedText = (<span class="number">0</span>, c.default)(<span class="built_in">this</span>.fakeElem), <span class="built_in">this</span>.copyText()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;removeFake&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.fakeHandler &amp;&amp; (<span class="built_in">this</span>.container.removeEventListener(<span class="string">&quot;click&quot;</span>, <span class="built_in">this</span>.fakeHandlerCallback), <span class="built_in">this</span>.fakeHandler = <span class="literal">null</span>, <span class="built_in">this</span>.fakeHandlerCallback = <span class="literal">null</span>), <span class="built_in">this</span>.fakeElem &amp;&amp; (<span class="built_in">this</span>.container.removeChild(<span class="built_in">this</span>.fakeElem), <span class="built_in">this</span>.fakeElem = <span class="literal">null</span>)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;selectTarget&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.selectedText = (<span class="number">0</span>, c.default)(<span class="built_in">this</span>.target), <span class="built_in">this</span>.copyText()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;copyText&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> e = <span class="keyword">void</span> <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    e = <span class="built_in">document</span>.execCommand(<span class="built_in">this</span>.action)</span><br><span class="line">                &#125; <span class="keyword">catch</span> (t) &#123;</span><br><span class="line">                    e = !<span class="number">1</span></span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">this</span>.handleResult(e)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;handleResult&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.emitter.emit(t ? <span class="string">&quot;success&quot;</span> : <span class="string">&quot;error&quot;</span>, &#123;</span><br><span class="line">                    <span class="attr">action</span>: <span class="built_in">this</span>.action,</span><br><span class="line">                    <span class="attr">text</span>: <span class="built_in">this</span>.selectedText,</span><br><span class="line">                    <span class="attr">trigger</span>: <span class="built_in">this</span>.trigger,</span><br><span class="line">                    <span class="attr">clearSelection</span>: <span class="built_in">this</span>.clearSelection.bind(<span class="built_in">this</span>)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;clearSelection&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.trigger &amp;&amp; <span class="built_in">this</span>.trigger.focus(), <span class="built_in">window</span>.getSelection().removeAllRanges()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;destroy&quot;</span>,</span><br><span class="line">            <span class="attr">value</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">this</span>.removeFake()</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;action&quot;</span>,</span><br><span class="line">            <span class="attr">set</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">var</span> t = <span class="number">0</span> &lt; <span class="built_in">arguments</span>.length &amp;&amp; <span class="keyword">void</span> <span class="number">0</span> !== <span class="built_in">arguments</span>[<span class="number">0</span>] ? <span class="built_in">arguments</span>[<span class="number">0</span>] : <span class="string">&quot;copy&quot;</span>;</span><br><span class="line">                <span class="keyword">if</span> (<span class="built_in">this</span>._action = t, <span class="string">&quot;copy&quot;</span> !== <span class="built_in">this</span>._action &amp;&amp; <span class="string">&quot;cut&quot;</span> !== <span class="built_in">this</span>._action) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;Invalid &quot;action&quot; value, use either &quot;copy&quot; or &quot;cut&quot;&#x27;</span>)</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">get</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">this</span>._action</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, &#123;</span><br><span class="line">            <span class="attr">key</span>: <span class="string">&quot;target&quot;</span>,</span><br><span class="line">            <span class="attr">set</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">void</span> <span class="number">0</span> !== t) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (!t || <span class="string">&quot;object&quot;</span> !== (<span class="keyword">void</span> <span class="number">0</span> === t ? <span class="string">&quot;undefined&quot;</span> : r(t)) || <span class="number">1</span> !== t.nodeType) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;Invalid &quot;target&quot; value, use a valid Element&#x27;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (<span class="string">&quot;copy&quot;</span> === <span class="built_in">this</span>.action &amp;&amp; t.hasAttribute(<span class="string">&quot;disabled&quot;</span>)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;Invalid &quot;target&quot; attribute. Please use &quot;readonly&quot; instead of &quot;disabled&quot; attribute&#x27;</span>);</span><br><span class="line">                    <span class="keyword">if</span> (<span class="string">&quot;cut&quot;</span> === <span class="built_in">this</span>.action &amp;&amp; (t.hasAttribute(<span class="string">&quot;readonly&quot;</span>) || t.hasAttribute(<span class="string">&quot;disabled&quot;</span>))) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&#x27;Invalid &quot;target&quot; attribute. You can\&#x27;t cut text from elements with &quot;readonly&quot; or &quot;disabled&quot; attributes&#x27;</span>);</span><br><span class="line">                    <span class="built_in">this</span>._target = t</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            <span class="attr">get</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="built_in">this</span>._target</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;]), e</span><br><span class="line">    &#125;();</span><br><span class="line">    t.exports = u</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    t.exports = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> e;</span><br><span class="line">        <span class="keyword">if</span> (<span class="string">&quot;SELECT&quot;</span> === t.nodeName) t.focus(), e = t.value;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;INPUT&quot;</span> === t.nodeName || <span class="string">&quot;TEXTAREA&quot;</span> === t.nodeName) &#123;</span><br><span class="line">            <span class="keyword">var</span> n = t.hasAttribute(<span class="string">&quot;readonly&quot;</span>);</span><br><span class="line">            n || t.setAttribute(<span class="string">&quot;readonly&quot;</span>, <span class="string">&quot;&quot;</span>), t.select(), t.setSelectionRange(<span class="number">0</span>, t.value.length), n || t.removeAttribute(<span class="string">&quot;readonly&quot;</span>), e = t.value</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            t.hasAttribute(<span class="string">&quot;contenteditable&quot;</span>) &amp;&amp; t.focus();</span><br><span class="line">            <span class="keyword">var</span> o = <span class="built_in">window</span>.getSelection(),</span><br><span class="line">                r = <span class="built_in">document</span>.createRange();</span><br><span class="line">            r.selectNodeContents(t), o.removeAllRanges(), o.addRange(r), e = o.toString()</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> e</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">    n.prototype = &#123;</span><br><span class="line">        <span class="attr">on</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> o = <span class="built_in">this</span>.e || (<span class="built_in">this</span>.e = &#123;&#125;);</span><br><span class="line">            <span class="keyword">return</span> (o[t] || (o[t] = [])).push(&#123;</span><br><span class="line">                <span class="attr">fn</span>: e,</span><br><span class="line">                <span class="attr">ctx</span>: n</span><br><span class="line">            &#125;), <span class="built_in">this</span></span><br><span class="line">        &#125;,</span><br><span class="line">        <span class="attr">once</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> o = <span class="built_in">this</span>;</span><br><span class="line"></span><br><span class="line">​    <span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">​        o.off(t, r), e.apply(n, <span class="built_in">arguments</span>)</span><br><span class="line">​    &#125;</span><br><span class="line">​    <span class="keyword">return</span> r._ = e, <span class="built_in">this</span>.on(t, r, n)</span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">emit</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">​    <span class="keyword">for</span> (<span class="keyword">var</span> e = [].slice.call(<span class="built_in">arguments</span>, <span class="number">1</span>), n = ((<span class="built_in">this</span>.e || (<span class="built_in">this</span>.e = &#123;&#125;))[t] || []).slice(), o = <span class="number">0</span>, r = n.length; o &lt; r; o++) n[o].fn.apply(n[o].ctx, e);</span><br><span class="line">​    <span class="keyword">return</span> <span class="built_in">this</span></span><br><span class="line">&#125;,</span><br><span class="line"><span class="attr">off</span>: <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">​    <span class="keyword">var</span> n = <span class="built_in">this</span>.e || (<span class="built_in">this</span>.e = &#123;&#125;),</span><br><span class="line">​        o = n[t],</span><br><span class="line">​        r = [];</span><br><span class="line">​    <span class="keyword">if</span> (o &amp;&amp; e)</span><br><span class="line">​        <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>, a = o.length; i &lt; a; i++) o[i].fn !== e &amp;&amp; o[i].fn._ !== e &amp;&amp; r.push(o[i]);</span><br><span class="line">​    <span class="keyword">return</span> r.length ? n[t] = r : <span class="keyword">delete</span> n[t], <span class="built_in">this</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;, t.exports = n</span><br><span class="line"></span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> d = n(<span class="number">5</span>),</span><br><span class="line">        h = n(<span class="number">6</span>);</span><br><span class="line">    t.exports = <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (!t &amp;&amp; !e &amp;&amp; !n) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">&quot;Missing required arguments&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!d.string(e)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Second argument must be a String&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (!d.fn(n)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;Third argument must be a Function&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span> (d.node(t)) <span class="keyword">return</span> s = e, f = n, (l = t).addEventListener(s, f), &#123;</span><br><span class="line">            <span class="attr">destroy</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                l.removeEventListener(s, f)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">if</span> (d.nodeList(t)) <span class="keyword">return</span> a = t, c = e, u = n, <span class="built_in">Array</span>.prototype.forEach.call(a, <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            t.addEventListener(c, u)</span><br><span class="line">        &#125;), &#123;</span><br><span class="line">            <span class="attr">destroy</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                <span class="built_in">Array</span>.prototype.forEach.call(a, <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">                    t.removeEventListener(c, u)</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">if</span> (d.string(t)) <span class="keyword">return</span> o = t, r = e, i = n, h(<span class="built_in">document</span>.body, o, r, i);</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">TypeError</span>(<span class="string">&quot;First argument must be a String, HTMLElement, HTMLCollection, or NodeList&quot;</span>);</span><br><span class="line">        <span class="keyword">var</span> o, r, i, a, c, u, l, s, f</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, n</span>) </span>&#123;</span><br><span class="line">    n.node = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">void</span> <span class="number">0</span> !== t &amp;&amp; t <span class="keyword">instanceof</span> HTMLElement &amp;&amp; <span class="number">1</span> === t.nodeType</span><br><span class="line">    &#125;, n.nodeList = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> e = <span class="built_in">Object</span>.prototype.toString.call(t);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">void</span> <span class="number">0</span> !== t &amp;&amp; (<span class="string">&quot;[object NodeList]&quot;</span> === e || <span class="string">&quot;[object HTMLCollection]&quot;</span> === e) &amp;&amp; <span class="string">&quot;length&quot;</span> <span class="keyword">in</span> t &amp;&amp; (<span class="number">0</span> === t.length || n.node(t[<span class="number">0</span>]))</span><br><span class="line">    &#125;, n.string = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;string&quot;</span> == <span class="keyword">typeof</span> t || t <span class="keyword">instanceof</span> <span class="built_in">String</span></span><br><span class="line">    &#125;, n.fn = <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;[object Function]&quot;</span> === <span class="built_in">Object</span>.prototype.toString.call(t)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = n(<span class="number">7</span>);</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">t, e, n, o, r</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i = <span class="function"><span class="keyword">function</span> (<span class="params">e, n, t, o</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">            t.delegateTarget = a(t.target, n), t.delegateTarget &amp;&amp; o.call(e, t)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;.apply(<span class="built_in">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line">    <span class="keyword">return</span> t.addEventListener(n, i, r), &#123;</span><br><span class="line">        <span class="attr">destroy</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            t.removeEventListener(n, i, r)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">t.exports = <span class="function"><span class="keyword">function</span> (<span class="params">t, e, n, o, r</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> t.addEventListener ? i.apply(<span class="literal">null</span>, <span class="built_in">arguments</span>) : <span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> n ? i.bind(<span class="literal">null</span>, <span class="built_in">document</span>).apply(<span class="literal">null</span>, <span class="built_in">arguments</span>) : (<span class="string">&quot;string&quot;</span> == <span class="keyword">typeof</span> t &amp;&amp; (t = <span class="built_in">document</span>.querySelectorAll(t)), <span class="built_in">Array</span>.prototype.map.call(t, <span class="function"><span class="keyword">function</span> (<span class="params">t</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> i(t, e, n, o, r)</span><br><span class="line">    &#125;))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">&quot;undefined&quot;</span> != <span class="keyword">typeof</span> Element &amp;&amp; !Element.prototype.matches) &#123;</span><br><span class="line">        <span class="keyword">var</span> n = Element.prototype;</span><br><span class="line">        n.matches = n.matchesSelector || n.mozMatchesSelector || n.msMatchesSelector || n.oMatchesSelector || n.webkitMatchesSelector</span><br><span class="line">    &#125;</span><br><span class="line">    t.exports = <span class="function"><span class="keyword">function</span> (<span class="params">t, e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (; t &amp;&amp; <span class="number">9</span> !== t.nodeType;) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="string">&quot;function&quot;</span> == <span class="keyword">typeof</span> t.matches &amp;&amp; t.matches(e)) <span class="keyword">return</span> t;</span><br><span class="line">            t = t.parentNode</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;])</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5、codeShrink-js"><a href="#5、codeShrink-js" class="headerlink" title="5、codeShrink.js"></a>5、codeShrink.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 代码块收缩</span></span><br><span class="line"></span><br><span class="line">$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> $code_expand = $(<span class="string">&#x27;&lt;i class=&quot;fa fa-chevron-down code-expand&quot; title=&quot;折叠代码&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  $(<span class="string">&#x27;.code-area&#x27;</span>).prepend($code_expand);</span><br><span class="line">  $(<span class="string">&#x27;.code-expand&#x27;</span>).on(<span class="string">&#x27;click&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ($(<span class="built_in">this</span>).parent().hasClass(<span class="string">&#x27;code-closed&#x27;</span>)) &#123;</span><br><span class="line">      $(<span class="built_in">this</span>).siblings(<span class="string">&#x27;pre&#x27;</span>).find(<span class="string">&#x27;code&#x27;</span>).show();</span><br><span class="line">      $(<span class="built_in">this</span>).parent().removeClass(<span class="string">&#x27;code-closed&#x27;</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      $(<span class="built_in">this</span>).siblings(<span class="string">&#x27;pre&#x27;</span>).find(<span class="string">&#x27;code&#x27;</span>).hide();</span><br><span class="line">      $(<span class="built_in">this</span>).parent().addClass(<span class="string">&#x27;code-closed&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="二、配置css文件"><a href="#二、配置css文件" class="headerlink" title="二、配置css文件"></a>二、配置css文件</h2><p>进入要修改主题文件夹themes/**/source/css 路径之后，打开matery.css文件，添加以下代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line">code &#123;</span><br><span class="line">    <span class="attr">padding</span>: 1px 5px;</span><br><span class="line">    font-family: Inconsolata, Monaco, Consolas, <span class="string">&#x27;Courier New&#x27;</span>, Courier, monospace;</span><br><span class="line">    <span class="comment">/* font-size: 0.91rem; */</span></span><br><span class="line">    color: #e96900;</span><br><span class="line">    background-color: #f8f8f8;</span><br><span class="line">    border-radius: 2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre code &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">0</span>;</span><br><span class="line">    color: #e8eaf6;</span><br><span class="line">    background-color: #<span class="number">272822</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>] &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">1.</span>2em;</span><br><span class="line">    margin: .5em <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">code[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>],</span><br><span class="line">pre[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>] &#123;</span><br><span class="line">    <span class="attr">color</span>: #e8eaf6;</span><br><span class="line">    white-space: pre-wrap !important;</span><br><span class="line">&#125; */</span><br><span class="line"></span><br><span class="line">.line-numbers-rows &#123;</span><br><span class="line">    border-right-width: 0px !important;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.line-numbers &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">1.</span>5rem <span class="number">1.</span>5rem <span class="number">1.</span>5rem <span class="number">3.</span>2rem !important;</span><br><span class="line">    margin: 1rem <span class="number">0</span> !important;</span><br><span class="line">    background: #<span class="number">272822</span>;</span><br><span class="line">    overflow: auto;</span><br><span class="line">    border-radius: <span class="number">0.</span>35rem;</span><br><span class="line">    tab-size: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">pre &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">1.</span>5rem !important;</span><br><span class="line">    margin: 1rem <span class="number">0</span> !important;</span><br><span class="line">    background: #<span class="number">272822</span>;</span><br><span class="line">    overflow: auto;</span><br><span class="line">    border-radius: <span class="number">0.</span>35rem;</span><br><span class="line">    tab-size: <span class="number">4</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="attr">pre</span>::before &#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    height: 16px;</span><br><span class="line">    margin-bottom: <span class="number">0</span>;</span><br><span class="line">    display: block;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="attr">pre</span>::after &#123;</span><br><span class="line">    <span class="attr">content</span>: <span class="string">&quot; &quot;</span>;</span><br><span class="line">    position: absolute;</span><br><span class="line">    border-radius: <span class="number">50</span>%;</span><br><span class="line">    background: #ff5f56;</span><br><span class="line">    width: 12px;</span><br><span class="line">    height: 12px;</span><br><span class="line">    top: <span class="number">0</span>;</span><br><span class="line">    left: 12px;</span><br><span class="line">    margin-top: 12px;</span><br><span class="line">    -webkit-box-shadow: 20px <span class="number">0</span> #ffbd2e, 40px <span class="number">0</span> #27c93f;</span><br><span class="line">    box-shadow: 20px <span class="number">0</span> #ffbd2e, 40px <span class="number">0</span> #27c93f;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">code &#123;</span><br><span class="line">    <span class="attr">padding</span>: 1px 5px;</span><br><span class="line">    font-family: Inconsolata, Monaco, Consolas, <span class="string">&#x27;Courier New&#x27;</span>, Courier, monospace;</span><br><span class="line">    font-size: <span class="number">0.</span>91rem;</span><br><span class="line">    color: #e96900;</span><br><span class="line">    background-color: #f8f8f8;</span><br><span class="line">    border-radius: 2px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.code_copy &#123;</span><br><span class="line">    <span class="attr">position</span>: absolute;</span><br><span class="line">    top: <span class="number">0.</span>7rem;</span><br><span class="line">    right: 35px;</span><br><span class="line">    z-index: <span class="number">1</span>;</span><br><span class="line">    filter: invert(<span class="number">50</span>%);</span><br><span class="line">    cursor: pointer;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.code_lang &#123;</span><br><span class="line">    <span class="attr">position</span>: absolute;</span><br><span class="line">    top: <span class="number">1.</span>2rem;</span><br><span class="line">    right: 60px;</span><br><span class="line">    line-height: <span class="number">0</span>;</span><br><span class="line">    font-weight: bold;</span><br><span class="line">    font-family: normal;</span><br><span class="line">    z-index: <span class="number">1</span>;</span><br><span class="line">    filter: invert(<span class="number">50</span>%);</span><br><span class="line">    cursor: pointer;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">.code-expand &#123;</span><br><span class="line">    <span class="attr">position</span>: absolute;</span><br><span class="line">    top: 4px;</span><br><span class="line">    right: 0px;</span><br><span class="line">    filter: invert(<span class="number">50</span>%);</span><br><span class="line">    padding: 7px 10px;</span><br><span class="line">    z-index: <span class="number">1</span>;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">    transition: all .3s;</span><br><span class="line">    transform: rotate(0deg);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.code-closed .code-expand &#123;</span><br><span class="line">    <span class="attr">transform</span>: rotate(-180deg) !important;</span><br><span class="line">    transition: all .3s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.code-closed pre::before &#123;</span><br><span class="line">    <span class="attr">height</span>: 0px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre code &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">0</span>;</span><br><span class="line">    color: #e8eaf6;</span><br><span class="line">    background-color: #<span class="number">272822</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">pre[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>] &#123;</span><br><span class="line">    <span class="attr">padding</span>: <span class="number">1.</span>2em;</span><br><span class="line">    margin: .5em <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">code[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>],</span><br><span class="line">pre[<span class="class"><span class="keyword">class</span>*</span>=<span class="string">&quot;language-&quot;</span>] &#123;</span><br><span class="line">    <span class="attr">color</span>: #e8eaf6;</span><br><span class="line">    white-space: pre-wrap !important;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、在post-ejs文件中添加如下代码"><a href="#三、在post-ejs文件中添加如下代码" class="headerlink" title="三、在post.ejs文件中添加如下代码"></a>三、在post.ejs文件中添加如下代码</h2><p>路径为主题文件夹下的layout文件夹中</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span> src=<span class="string">&quot;/libs/codeBlock/codeBlockFuction.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;!-- 代码语言 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/libs/codeBlock/codeLang.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!-- 代码块复制 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/libs/codeBlock/codeCopy.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/libs/codeBlock/clipboard.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;!-- 代码块收缩 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/libs/codeBlock/codeShrink.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span> </span><br><span class="line">&lt;!-- 代码块折行 --&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">&quot;text/css&quot;</span>&gt;</span><span class="css"><span class="selector-tag">code</span><span class="selector-attr">[class*=<span class="string">&quot;language-&quot;</span>]</span>, pre<span class="selector-attr">[class*=<span class="string">&quot;language-&quot;</span>]</span> &#123; <span class="attribute">white-space</span>: pre <span class="meta">!important</span>; &#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>全部完成之后，重新部署即可</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">yubing Wu</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://wayto-happy.github.io/2022/10/21/%E4%BF%AE%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2/">https://wayto-happy.github.io/2022/10/21/%E4%BF%AE%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">yubing Wu</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">君识 我知</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2022/10/21/%E4%BF%AE%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="修改Hexo博客代码显示界面">
+                        
+                        <span class="card-title">修改Hexo博客代码显示界面</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    课外学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/10/21/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E7%95%8C%E9%9D%A2/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="为Hexo博客添加音乐播放界面">
+                        
+                        <span class="card-title">为Hexo博客添加音乐播放界面</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    课外学习
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+    <footer class="page-footer bg-color">
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">yubing Wu</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/wayto-happy" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1753032485@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1753032485" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1753032485" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+
+</body>
+
+</html>

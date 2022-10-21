@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="SNP GWAS, 博客制作,经验分享,大道修心,生物信息等">
+    <meta name="keywords" content="为Hexo博客添加音乐播放界面, 博客制作,经验分享,大道修心,生物信息等">
     <meta name="description" content="TO LEARN | TO LOVE | TO LIVE">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>SNP GWAS | way·to·happy</title>
+    <title>为Hexo博客添加音乐播放界面 | way·to·happy</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">SNP GWAS</h1>
+                    <h1 class="description center-align post-title">为Hexo博客添加音乐播放界面</h1>
                 </div>
             </div>
         </div>
@@ -439,8 +439,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/GWAS/">
-                                <span class="chip bg-color">GWAS</span>
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
                             </a>
                         
                     </div>
@@ -451,8 +451,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                项目学习
+                            <a href="/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                课外学习
                             </a>
                         
                     </div>
@@ -464,7 +464,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-19
+                    2022-10-21
                 </div>
                 
 
@@ -485,107 +485,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome ! This is my first post. Check documentation for more info. To live, to love, to learn, and love is love !</p>
-<p><strong>by wuyubing 2021/07/12</strong></p>
-<h1 id="常规SNP-GWAS分析"><a href="#常规SNP-GWAS分析" class="headerlink" title="常规SNP GWAS分析"></a>常规SNP GWAS分析</h1><p>GWAS脚本复演</p>
-<h2 id="1，质控"><a href="#1，质控" class="headerlink" title="1，质控"></a>1，质控</h2><p> vcf=Variant Call Format 是用于描述SNP，InDel和SV结果的文本文件质控</p>
-<p>#查看vcf格式压缩文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zmore 505_maf0.05.int0.9.vcf.gz</span><br></pre></td></tr></table></figure>
-
-<p>染色体设置要比基因组多，不可以少，选择推荐的41：–chr-set 41</p>
-<p>#Convert vcf to Plink format：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --vcf 505_maf0.05.int0.9.vcf.gz --chr-set 41 --make-bed --out 505_maf0.05.int0.9 </span><br></pre></td></tr></table></figure>
-
-<p>#为缺少rs标识符的SNP分配唯一的标识符：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_maf0.05.int0.9 --set-missing-var-ids @:#[c41]\$1,\$2 --chr-set 41 --make-bed --out 505_maf0.05.int0.9_no_missing_IDs</span><br></pre></td></tr></table></figure>
-
-<p> [c41]为自己取的名字 </p>
-<p>–geno：排除大部分受试者中缺失的 SNP;</p>
-<p>-‐mind：排除基因型缺失率高的个体。</p>
-<p>建议首先基于宽松的阈值（0.2;&gt; 20％）过滤 SNP 和个体，过滤掉丢失程度很高的 SNP 和个体。然后再应用更严格的过滤参数（0.02）。**注意，应先执行 SNP 过滤再进行个体水平过滤。 </p>
-<p> #根据缺失的基因型数据删除SNP：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_maf0.05.int0.9_no_missing_IDs --geno 0.2 --allow-no-sex --chr-set 41 --make-bed --out 505_MDS </span><br></pre></td></tr></table></figure>
-
-<p>#根据缺失的基因型数据删除个体：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS --mind 0.2 --allow-no-sex --chr-set 41 --make-bed --out 505_MDS2</span><br></pre></td></tr></table></figure>
-
-<p> #根据缺失的基因型数据删除SNP：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS2 --geno 0.02 --allow-no-sex --chr-set 41 --make-bed --out 505_MDS3 </span><br></pre></td></tr></table></figure>
-
-<p>#根据缺失的基因型数据删除个体：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS3 --mind 0.02 --allow-no-sex --chr-set 41 --make-bed --out 505_MDS4</span><br></pre></td></tr></table></figure>
-
-<p> ‐‐maf：仅输出高于 MAF 阈值的 SNP。MAF 低的 SNP 很罕见，因此缺乏检测 SNP 表型关联的 power 。这些 SNP 也更容易出现基因分型错误。MAF 阈值应取决于样本量，较大的样本可以使用较低的 MAF 阈值。对于大样本（N = 100,000）与中等样本（N = 10000），通常将 0.01 和 0.05 用作 MAF 阈值。 </p>
-<p>#根据最小等位基因频率（MAF）去筛选：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS4 --maf 0.05 --allow-no-sex --chr-set 41 --make-bed --out 505_MDS5</span><br></pre></td></tr></table></figure>
-
-<h2 id="2，群体结构分析"><a href="#2，群体结构分析" class="headerlink" title="2，群体结构分析"></a>2，群体结构分析</h2><p> #将质控之后的505_MDS5文件复制到Structure文件夹进行下一步分析</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp 505_MDS5.*  /vol3/agis/chengshifeng_group/wuyubing/brassica/guo/02_structure</span><br></pre></td></tr></table></figure>
-
-<p> #LD筛选：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS5 --indep-pairwise 50 10 0.2 --chr-set 41</span><br></pre></td></tr></table></figure>
-
-<p>#将其转化为bed文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS5 --extract plink.prune.in --chr-set 41 --make-bed --out 505LD</span><br></pre></td></tr></table></figure>
-
-<p> #安装admixture </p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install admixture</span><br></pre></td></tr></table></figure>
-
-<p>#计算K的CV值</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> K <span class="keyword">in</span> 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15;<span class="keyword">do</span>;admixture --cv 505LD.bed <span class="variable">$K</span> | tee <span class="built_in">log</span><span class="variable">$&#123;K&#125;</span>.out;<span class="keyword">done</span>;</span><br></pre></td></tr></table></figure>
-
-<p>#使用grep查看<em>out文件的cv error(交叉验证的误差)值：</em></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep -h CV *.out</span><br></pre></td></tr></table></figure>
-
-<p>CV error (K=10): 0.84891</p>
-<p>CV error (K=11): 0.84703</p>
-<p>CV error (K=12): 0.84678</p>
-<p>CV error (K=13): 0.84851</p>
-<p>CV error (K=14): 0.84789</p>
-<p>CV error (K=15): 0.85001</p>
-<p>CV error (K=1): 0.94150</p>
-<p>CV error (K=2): 0.90103</p>
-<p>CV error (K=3): 0.88261</p>
-<p>CV error (K=4): 0.87245</p>
-<p>CV error (K=5): 0.86499</p>
-<p>CV error (K=6): 0.85874</p>
-<p>CV error (K=7): 0.85451</p>
-<p>CV error (K=8): 0.85246</p>
-<p>CV error (K=9): 0.84955 </p>
-<p>有待完善</p>
-<p>#使用R作图：</p>
-<p>#启用R：</p>
-<p>R</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">two=read.table(<span class="string">&quot;505LD.2.Q&quot;</span>)</span><br><span class="line">head(two)</span><br><span class="line"></span><br><span class="line">pdf(<span class="string">&quot;K2.pdf&quot;</span>,height=<span class="number">10</span>,width=<span class="number">16</span>)</span><br><span class="line">barplot(t(as.matrix(two)), col=rainbow(<span class="number">2</span>), xlab=<span class="string">&quot;Individual&quot;</span>, ylab=<span class="string">&quot;Ancestry&quot;</span>, border=<span class="literal">NA</span>)</span><br><span class="line">dev.off()</span><br><span class="line"></span><br><span class="line">png(<span class="string">&quot;K2.png&quot;</span>,height=<span class="number">1000</span>,width=<span class="number">1600</span>)</span><br><span class="line">barplot(t(as.matrix(two)), col=rainbow(<span class="number">2</span>),xlab=<span class="string">&quot;Individual&quot;</span>, ylab=<span class="string">&quot;Ancestry&quot;</span>, border=<span class="literal">NA</span>)</span><br><span class="line">dev.off()</span><br></pre></td></tr></table></figure>
-
-<h2 id="3，亲缘关系分析"><a href="#3，亲缘关系分析" class="headerlink" title="3，亲缘关系分析"></a>3，亲缘关系分析</h2><p>#将QC及筛选后结果复制到kinship文件夹：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp 505_MDS5.* /vol3/agis/chengshifeng_group/wuyubing/brassica/guo/03_kinship</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plink --bfile 505_MDS5 --recode 12 --output-missing-genotype 0 --transpose --chr-set 41 -out 505</span><br></pre></td></tr></table></figure>
-
-<p> 生成505.tfam/tped文件</p>
-<p>调用emmax:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emmax;emmax-kin -v -h -d 10 505</span><br></pre></td></tr></table></figure>
-
-<p> 生成（505.hBN.kinf） </p>
-<h2 id="4，将表型数据和基因数据整理成一致"><a href="#4，将表型数据和基因数据整理成一致" class="headerlink" title="4，将表型数据和基因数据整理成一致"></a>4，将表型数据和基因数据整理成一致</h2><p>表型数据格式：两列和基因型对应的编号，一列表型数据 </p>
-<p>表型最优无偏预测</p>
-<h2 id="5，跑gwas"><a href="#5，跑gwas" class="headerlink" title="5，跑gwas"></a>5，跑gwas</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emmax -v -d 10 -t 505 -o df_gwas_result -p 2phe_gtdianfeng.txt -k 505.BN.kinf -c cov.emmax.txt</span><br></pre></td></tr></table></figure>
-
-<p>df_gwas_result ：输出结果文件名</p>
-<p>2phe_gtdianfeng.txt：输入表型文件</p>
-<p>505.BN.kinf：输入上一步亲缘关系产生的.kinf文件</p>
-<p>cov.emmax.txt：输入协变量文件 </p>
-<h2 id="6，结果可视化（曼哈顿图和QQ图）"><a href="#6，结果可视化（曼哈顿图和QQ图）" class="headerlink" title="6，结果可视化（曼哈顿图和QQ图）"></a>6，结果可视化（曼哈顿图和QQ图）</h2><p>在服务器里提交有R脚本的作业 </p>
-<p>先写个R脚本后缀 .r,</p>
-<p>然后在 .sh脚本里 Rscript  .r 运行R脚本，</p>
-<p>然后正常提交作业 </p>
-<p>画SNP密度图安装r包CMplot:</p>
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(<span class="string">&quot;CMplot&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#SNP-density plot</span></span><br><span class="line"></span><br><span class="line">library(CMplot)</span><br><span class="line"></span><br><span class="line">datetwo=read.csv(<span class="string">&quot;two_gwas_result_delete_random.txt&quot;</span>,header=<span class="built_in">T</span>,sep=<span class="string">&quot;\t&quot;</span>)</span><br><span class="line"></span><br><span class="line">head(datetwo)</span><br><span class="line"></span><br><span class="line">CMplot(datetwo,type=<span class="string">&quot;p&quot;</span>,plot.type=<span class="string">&quot;d&quot;</span>,bin.size=<span class="number">1e6</span>,chr.den.col=<span class="built_in">c</span>(<span class="string">&quot;darkgreen&quot;</span>,<span class="string">&quot;yellow&quot;</span>,<span class="string">&quot;red&quot;</span>),file=<span class="string">&quot;jpg&quot;</span>,memo=<span class="string">&quot;&quot;</span>,dpi=<span class="number">600</span>,file.output=<span class="literal">TRUE</span>,verbose=<span class="literal">TRUE</span>,width=<span class="number">9</span>,height=<span class="number">6</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#绘制单性状曼哈顿图</span></span><br><span class="line"></span><br><span class="line">CMplot(datetwo,plot.type=<span class="string">&quot;m&quot;</span>, LOG10=<span class="literal">TRUE</span>, ylim=<span class="literal">NULL</span>, threshold=<span class="built_in">c</span>(<span class="number">1e-3</span>,<span class="number">1e-2</span>),threshold.col=<span class="built_in">c</span>(<span class="string">&#x27;grey&#x27;</span>,<span class="string">&#x27;black&#x27;</span>), threshold.lty = <span class="built_in">c</span>(<span class="number">1</span>,<span class="number">2</span>),threshold.lwd = <span class="built_in">c</span>(<span class="number">1</span>,<span class="number">1</span>), amplify = <span class="built_in">T</span>,signal.cex = <span class="built_in">c</span>(<span class="number">1.5</span>,<span class="number">1.5</span>), signal.pch = <span class="built_in">c</span>(<span class="number">19</span>,<span class="number">19</span>),signal.col = <span class="built_in">c</span>(<span class="string">&quot;firebrick1&quot;</span>))</span><br></pre></td></tr></table></figure>
-
-
+                <p>To learn！</p>
+<p>To live！ </p>
+<p>To love！</p>
+<hr>
+<h1 id="为Hexo博客添加音乐播放界面"><a href="#为Hexo博客添加音乐播放界面" class="headerlink" title="为Hexo博客添加音乐播放界面"></a>为Hexo博客添加音乐播放界面</h1><h2 id="一、"><a href="#一、" class="headerlink" title="一、"></a>一、</h2>
                 
             </div>
             <hr/>
@@ -611,7 +515,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wayto-happy.github.io/2021/07/19/SNPGWASwyb/">https://wayto-happy.github.io/2021/07/19/SNPGWASwyb/</a>
+                    <a href="https://wayto-happy.github.io/2022/10/21/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E7%95%8C%E9%9D%A2/">https://wayto-happy.github.io/2022/10/21/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E7%95%8C%E9%9D%A2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,8 +553,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/GWAS/">
-                                    <span class="chip bg-color">GWAS</span>
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
                                 </a>
                             
                         </div>
@@ -826,13 +730,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/10/21/%E5%A6%82%E4%BD%95%E5%88%A9%E7%94%A8Hexo%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+                <a href="/2022/10/21/%E4%BF%AE%E6%94%B9Hexo%E5%8D%9A%E5%AE%A2%E4%BB%A3%E7%A0%81%E6%98%BE%E7%A4%BA%E7%95%8C%E9%9D%A2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="如何利用Hexo部署自己的博客空间">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="修改Hexo博客代码显示界面">
                         
-                        <span class="card-title">如何利用Hexo部署自己的博客空间</span>
+                        <span class="card-title">修改Hexo博客代码显示界面</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -872,16 +776,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/19/SNPGWASwyb/">
+                <a href="/2022/10/21/%E4%B8%BAHexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E4%BA%8C%E6%AC%A1%E5%85%83%E5%B0%8F%E4%BA%BA%E7%89%A9/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="SNP GWAS">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="为Hexo博客添加二次元小人物">
                         
-                        <span class="card-title">SNP GWAS</span>
+                        <span class="card-title">为Hexo博客添加二次元小人物</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -892,26 +796,25 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-10-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/" class="post-category">
-                                    项目学习
+                            <a href="/categories/%E8%AF%BE%E5%A4%96%E5%AD%A6%E4%B9%A0/" class="post-category">
+                                    课外学习
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/GWAS/">
-                        <span class="chip bg-color">GWAS</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
